@@ -64,7 +64,7 @@ exports.updateUserProfile = async (req, res) => {
 };
 
 // Deactivate User
-exports.deactivateUser = async (req, res) => {
+exports.logout = async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
     if (!user) return res.status(404).json({ message: "User not found" });
